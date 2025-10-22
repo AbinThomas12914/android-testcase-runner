@@ -4,9 +4,13 @@
   "description": "WebdriverIO project with Cucumber BDD for mobile app testing using Appium",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_OPTIONS='--loader=ts-node/esm/transpile-only --no-warnings' npx wdio run wdio.conf.js",
+    "test": "npx wdio run wdio.conf.js",
     "test:simple": "npx wdio run wdio.simple.conf.js",
+    "test:dynamic": "npx wdio run wdio.dynamic.conf.js",
+    "test:main": "NODE_OPTIONS='--loader=ts-node/esm/transpile-only --no-warnings' npx wdio run wdio.conf.js",
+    "test:debug": "npx wdio run wdio.simple.conf.js --spec ./features/flight-booking.feature",
     "test:android": "npx wdio run wdio.conf.js --suite android",
+    "detect:device": "node config/device-capabilities.js",
     "install:deps": "npm install"
   },
   "keywords": [

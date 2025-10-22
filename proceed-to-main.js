@@ -1,23 +1,20 @@
 const { remote } = require('webdriverio');
+const { getDeviceCapabilities } = require('./config/device-capabilities');
 
 async function proceedToMainApp() {
-    console.log('🔗 Connecting to Appium...');
+    console.log('🔗 Connecting to Appium with dynamic capabilities...');
+    
+    // Get dynamic capabilities
+    const capabilities = await getDeviceCapabilities();
+    console.log('📱 Using device:', capabilities['appium:deviceName'], 
+                'Android', capabilities['appium:platformVersion']);
     
     const driver = await remote({
         protocol: 'http',
         hostname: '127.0.0.1',
         port: 4723,
         path: '/wd/hub/',
-        capabilities: {
-            platformName: 'Android',
-            'appium:platformVersion': '11.0',
-            'appium:deviceName': 'sdk_gphone_arm64',
-            'appium:automationName': 'UiAutomator2',
-            'appium:app': '/Users/A-10710/Documents/IBS/AI/android-testcase-runner/apps/expedia.apk',
-            'appium:noReset': true,
-            'appium:fullReset': false,
-            'appium:newCommandTimeout': 240
-        }
+        capabilities
     });
 
     try {
