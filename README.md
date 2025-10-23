@@ -1,3 +1,4 @@
+
 # WebdriverIO Mobile Test Automation with Cucumber
 
 This project provides a complete mobile test automation framework using WebdriverIO, Cucumber BDD, and Appium for Android app testing.
@@ -142,7 +143,7 @@ The project includes the following test scenarios:
 
 ## 🔧 Page Object Model
 
-Each page class follows this pattern:
+Each page class Follows this pattern:
 
 ```javascript
 class HomePage {
