@@ -59,27 +59,11 @@ else
     echo "❌ wdio.conf.js not found"
 fi
 
-# Check feature files
-echo "🥒 Checking Cucumber features..."
-if [ -d "features" ] && [ -f "features/flight-booking.feature" ]; then
-    echo "✅ Feature files found"
-else
-    echo "❌ Feature files not found"
-fi
-
-# Check page objects
-echo "🏛️ Checking Page Objects..."
-if [ -d "page-objects" ] && [ -f "page-objects/HomePage.js" ]; then
-    echo "✅ Page Object files found"
-else
-    echo "❌ Page Object files not found"
-fi
-
 echo ""
 echo "======================================"
 echo "📋 Next Steps:"
 echo "1. Update app path in wdio.conf.js"
 echo "2. Start Android emulator"
 echo "3. Start Appium server: appium --address 127.0.0.1 --port 4723"
-echo "4. Run tests: npm test"
+echo "4. Run tests: npm test or npm run test"
 echo "======================================"
