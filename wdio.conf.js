@@ -41,7 +41,11 @@ function getDynamicCapabilities() {
             'appium:fullReset': false,
             'appium:newCommandTimeout': 240,
             'appium:connectHardwareKeyboard': true,
-            'appium:udid': deviceId
+            'appium:udid': deviceId,
+            'appium:skipServerInstallation': false,
+            'appium:skipDeviceInitialization': false,
+            'appium:systemPort': 8200,
+            'appium:chromeDriverPort': 8000
         };
         
     } catch (error) {
@@ -122,7 +126,7 @@ exports.config = {
             args: {
                 address: 'localhost',
                 port: 4723,
-                basePath: '/wd/hub/'
+                basePath: '/'
             },
             logPath: './logs',
             command: 'appium'

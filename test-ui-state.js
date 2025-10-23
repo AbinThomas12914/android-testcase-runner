@@ -8,7 +8,7 @@ async function testUIState() {
     const driver = await remote({
         hostname: '127.0.0.1',
         port: 4723,
-        path: '/wd/hub/',
+        path: '/',
         capabilities: capabilities
     });
 

@@ -50,7 +50,7 @@ exports.config = {
     
     // WebdriverIO port for Appium
     port: 4723,
-    path: '/wd/hub/',
+    path: '/',
     
     //
     // =====
